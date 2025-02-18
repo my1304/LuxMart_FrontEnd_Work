@@ -1,0 +1,111 @@
+.productImageGallery {
+  display: flex;
+  flex-direction: row; /* Располагает изображения в ряд */
+  overflow-x: auto; /* Добавляем горизонтальную прокрутку для длинных списков */
+  gap: 10px; /* Расстояние между изображениями */
+
+}
+  
+.productImageContainer {
+  position: relative; /* Для позиционирования кнопки внутри контейнера */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+  
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #00911f;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 41vh;
+}
+
+  
+  .ProductImageError {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: red;
+    text-align: center;
+  }
+
+  .addImageProductButton {
+    position: sticky; /* Кнопка остается на месте при прокрутке */
+    top: 20vh; /* Фиксация сверху контейнера */
+    align-self: flex-start; /* Выравнивание относительно начала контейнера */
+    background-color: #7eaadf;  
+    font-size: 2rem;
+    color: #fff;
+    height: 4vh; /* Квадратная форма */
+    border: 2px solid #00911f;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* Центрирование содержимого кнопки */
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Устанавливаем приоритет над изображениями */
+  }
+  
+  .addImageProductButton:hover {
+    background-color:  #007bff;
+  }
+  
+  /* Контейнер для изображений продукта */
+.product-images {
+  display: flex;
+  flex-direction: row; /* Располагает изображения в ряд */
+  overflow-x: auto; /* Добавляем горизонтальную прокрутку для длинных списков */
+  gap: 15px; /* Расстояние между изображениями */
+  margin: 20px 0;
+  padding: 10px 0; /* Немного отступов сверху и снизу */
+  scrollbar-width: thin; /* Тонкий скроллбар для браузеров, поддерживающих CSS Scrollbar */
+}
+
+/* Контейнер для каждого изображения */
+.productImages {
+  display: flex;
+  flex-direction: row; /* Горизонтальная галерея */
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.imageErrorText {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Стили для текста об ошибке изображения */
+.image-error-text {
+  font-size: 14px;
+  color: red;
+  text-align: center;
+  margin-top: 5px;
+}
+.deleteButton {
+  position: absolute;
+  top: 5px; /* Отступ сверху */
+  right: 5px; /* Отступ справа */
+  background: rgba(0, 255, 98, 0.8); /* Красный полупрозрачный фон */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Круглая кнопка */
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Над изображением */
+}
+
+.deleteButton:hover {
+  background: red; /* Ярко-красный фон при наведении */
+}

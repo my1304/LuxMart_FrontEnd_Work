@@ -1,0 +1,144 @@
+.overlayCategory {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрирование по вертикали */
+  z-index: 1000;
+  overflow: auto; 
+}
+
+.dialogBoxCategory {
+  background: #f8f8f8; /* Светлый фон */
+  border-radius: 12px;
+  position: relative;
+  width: 70vw; /* Ширина 70% от ширины экрана */
+  max-width: 70vh; /* Ограничение ширины */
+  max-height: 70vh; /* Ограничение высоты */
+  padding: 20px;
+  border: 2px solid #00911f; /* Рамка */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Тень */
+  overflow: hidden; /* Отключаем прокрутку */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Заголовок модального окна */
+.titleBarCategory {
+  background: #0078d7; /* Синий цвет заголовка */
+  padding: 15px 20px; /* Добавлен отступ */
+  display: flex;
+  justify-content: space-between; /* Расположить элементы в заголовке */
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute; /* Позиционирование поверх модального окна */
+  top: 0;
+  left: 0;
+  width: 100%; /* Растянуть по ширине */
+}
+
+.categoryImageContainer {
+  display: flex;
+  max-width: 90vh;
+  max-height: 30vh;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  flex-direction: column;
+}
+
+.categoryImage {
+  display: flex;
+  overflow: auto;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+/* Кнопка закрытия */
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute; /* Для позиционирования */
+  right: 10px; /* Расположение слева с небольшим отступом */
+  top: 50%; /* Вертикальное центрирование */
+  transform: translateY(-50%); /* Смещение для идеального центрирования */
+}
+
+.closeBtn:hover {
+  color: #ff4d4d; /* Красный цвет при наведении */
+}
+
+/* Основное содержание модального окна */
+.contentArea {
+  flex: 1; /* Растягиваем содержимое, чтобы оно занимало доступное пространство */
+  padding: 60px 20px 20px; /* Добавлен верхний отступ для заголовка */
+  color: #333;
+  text-align: center;
+  background: #f8f8f8;
+  overflow-y: auto; /* Прокрутка, если содержимого много */
+}
+
+/* Текст заголовка */
+.alertText {
+  font-weight: 500;
+  font-size: 24px; /* Увеличен размер для лучшей читаемости */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Секция для описания */
+.categoryDescription {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Группа кнопок */
+.buttonGroup {
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: auto; /* Отодвигаем кнопки вниз */
+}
+
+/* Кнопки OK и Cancel */
+.okBtn,
+.cancelBtn {
+  background-color: #0078d7; /* Синий цвет кнопки */
+  font-size: 16px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.okBtn:hover {
+  background-color: #005bb5; /* Темно-синий цвет при наведении */
+}
+
+.cancelBtn {
+  background-color: #f44336; /* Красный цвет кнопки Cancel */
+}
+
+.cancelBtn:hover {
+  background-color: #d32f2f; /* Темно-красный цвет при наведении */
+}

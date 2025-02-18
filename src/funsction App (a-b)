@@ -1,0 +1,38 @@
+import React, { useEffect, useState } from 'react';
+
+function App() {
+  const [response, setResponse] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        alert("Start");
+        const result = await fetch('http://localhost:8088/api/sum', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ a: 5, b: 10 }),
+       //   mode: 'no-cors'  // Устанавливаем режим no-cors
+        });
+        if (!result.ok) {
+          alert(`Ошибка HTTP! Статус: ${result.status}`);
+          throw new Error(`Ошибка HTTP! Статус: ${result.status}`);
+        }
+    
+        const data = await result.json();  // Парсинг JSON только при успешном ответе
+        setResponse(data);
+      } catch (error) {
+        console.error('Ошибка при получении данных:', error);
+      }
+    };  
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Response from Backend:</h1>
+      {response ? <pre>{JSON.stringify(response, null, 2)}</pre> : <p>Loading...</p>}
+    </div>
+  );
+}
+
+export default App;

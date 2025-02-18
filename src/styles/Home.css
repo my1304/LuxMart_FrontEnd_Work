@@ -1,0 +1,34 @@
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 84vh; /* Заполнение по высоте экрана */
+  }
+
+  /* Стиль для заголовка */
+  .home-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .home-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .home-work {
+    background-image: url('../images/pageHimmel.jpg'); /* Путь к изображению */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: auto; /* Сдвигает блок вниз */
+  }

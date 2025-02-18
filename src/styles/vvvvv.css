@@ -1,0 +1,83 @@
+/* Контейнер для всей секции */
+.products-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Таблица категорий */
+.category-table {
+  width: 30%;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.category-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.category-table tr {
+  cursor: pointer;
+}
+
+/* Фон при наведении и активное состояние для категории */
+.category-table tr.active {
+  background-color: #ddd;
+}
+
+.category-table tr:hover {
+  background-color: #f0f0f0; /* Светло-серый фон при наведении */
+}
+
+/* Таблица продуктов */
+.product-table {
+  width: 70%;
+  padding: 10px;
+}
+
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Фон при наведении на строку продукта */
+.product-table tr:hover {
+  background-color: #f0f0f0; /* Светло-серый фон при наведении */
+}
+
+/* Изображение категории */
+.category-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Изображение продукта */
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Таблица продуктов */
+.product-table th,
+.product-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}

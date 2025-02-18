@@ -1,0 +1,135 @@
+/* --- Основной контейнер --- */
+.CommonContainer {
+  display: flex; /* Flexbox для расположения категорий и продуктов */
+  gap: 3px; /* Расстояние между секциями */
+  padding: 3px;
+  border: 1px solid #aaa; /* Рамка вокруг контейнера */
+  border-radius: 3px; /* Скругленные углы */
+  background-color: #f0f0f0; /* Светло-серый фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  height: 100vh; /* Устанавливаем фиксированную высоту контейнера */
+  width: 100%; /* Контейнер занимает всю ширину */
+  box-sizing: border-box; /* Учитываем границы и отступы */
+}
+
+/* --- Секция категорий --- */
+.categoriesSection {
+  flex: 0 0 20%; /* Категории занимают 20% ширины контейнера */
+  max-width: 20%; /* Ограничиваем ширину */
+  height: 100%; /* Секция занимает всю высоту контейнера */
+  border: 1px dashed #4CAF50; /* Зелёная пунктирная рамка */
+  border-radius: 8px;
+  background-color: #e8f5e9; /* Светло-зеленый фон */ 
+  padding: 0.5%;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+.categoriesSection h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.categoriesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.refresh-btn:hover {
+  color: #007bff; /* Цвет при наведении */
+  transform: rotate(360deg); /* Анимация вращения */
+  transition: transform 0.5s;
+}
+
+/* Таблица категорий */
+.categoriesSection table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.categoriesSection table thead th {
+  position: sticky; /* Фиксирует элемент */
+  top: 0; /* Устанавливает расстояние от верхней границы */
+  z-index: 2; /* Устанавливает приоритет отображения над другими элементами */
+  background-color: #e8f5e9; /* Фон совпадает с фоном секции */
+  border-bottom: 2px solid #4CAF50; /* Добавляет нижнюю границу для отделения */
+  padding: 0.5rem; /* Отступ внутри ячеек */
+  text-align: center; /* Выравнивание текста */
+}
+
+.categoriesSection table tbody {
+  display: block; /* Устанавливаем блочный уровень для tbody */
+  height: calc(88vh - 5cm);  /* Устанавливаем относительную высоту (80% от родителя) */
+  overflow-y: auto; /* Добавляем вертикальную прокрутку */
+  width: 100%; /* Устанавливаем ширину для выравнивания с заголовком */
+}
+.categoriesSection table thead,
+.categoriesSection table tbody tr {
+  display: table; /* Табличный уровень для правильного выравнивания */
+  width: 100%; /* Соответствие ширины таблицы */
+  table-layout: fixed; /* Фиксированный макет */
+}
+
+.categoriesSection table tbody td {
+  padding: 0.5%;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Разделительная линия */
+}
+
+/* Фон при наведении и активное состояние для категории */
+.categoriesSection tr.active {
+  background-color: #beabad;
+}
+
+.categoriesSection tr:hover {
+  background-color: #bfa9db; /* Светло-серый фон при наведении */
+}
+
+/* Контейнер для кнопки добавления */
+.add-category-container {
+  display: flex;
+  justify-content: flex-end; /* Перемещает кнопку вправо */
+  align-items: center; /* Выравнивает кнопку по центру вертикали */ 
+}
+
+.add-category-btn {
+  padding: 0.1rem 0.5rem;
+  background-color: #7eaadf;  
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-category-btn:hover {
+  background-color:  #007bff;
+}
+
+.delete-category-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete-category-btn:hover {
+  color: darkred;
+}
+
+/* Изображение категории */
+.category-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}

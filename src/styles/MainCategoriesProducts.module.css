@@ -1,0 +1,109 @@
+/* --- Основной контейнер --- */
+.CommonContainer {
+  display: flex; /* Flexbox для расположения категорий и продуктов */
+  gap: 20px; /* Расстояние между секциями */
+  padding: 20px;
+  border: 2px solid #aaa; /* Рамка вокруг контейнера */
+  border-radius: 12px; /* Скругленные углы */
+  background-color: #f0f0f0; /* Светло-серый фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  height: 84vh; /* Устанавливаем фиксированную высоту контейнера */
+  width: 100%; /* Контейнер занимает всю ширину */
+  box-sizing: border-box; /* Учитываем границы и отступы */
+}
+
+/* --- Секция категорий --- */
+.categoriesSection {
+  flex: 0 15%; /* Категории занимают 20% ширины контейнера */
+  max-width: 15%; /* Ограничиваем ширину */
+  height: 100%; /* Секция занимает всю высоту контейнера */
+  border: 2px dashed #4CAF50; /* Зелёная пунктирная рамка */
+  border-radius: 8px;
+  background-color: #e8f5e9; /* Светло-зеленый фон */
+  overflow-y: auto; /* Прокрутка, если содержимого больше высоты */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  padding: 15px;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* --- Секция продуктов --- */
+.productsSection {
+  flex: 0 0 0 50%; /* Продукты занимают 80% ширины контейнера */
+  max-width: 50%; /* Ограничиваем ширину */
+  height: 100%; /* Секция занимает всю высоту контейнера */
+  border: 2px solid #FF9800; /* Оранжевая сплошная рамка */
+  border-radius: 8px;
+  background-color: #fff3e0; /* Светло-оранжевый фон */
+  overflow-y: auto; /* Прокрутка, если содержимого больше высоты */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Легкая тень */
+  padding: 15px;
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* --- Общие стили таблиц для категорий и продуктов --- */
+.table {
+  width: 100%; /* Таблицы занимают всю ширину секций */
+  border-collapse: collapse; /* Убираем пробелы между ячейками */
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 12px 8px; /* Оптимальные отступы */
+  text-align: left;
+  border-bottom: 1px solid #eee; /* Линии между строками */
+}
+
+.table th {
+  background-color: #f5f5f5; /* Светлый фон для заголовков */
+  font-weight: bold;
+  text-transform: uppercase; /* Верхний регистр текста */
+  font-size: 0.9em; /* Уменьшенный размер шрифта для заголовков */
+}
+
+.table tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Плавный переход для фона */
+}
+
+.table tr:hover {
+  background-color: #f0f8ff; /* Светло-голубой фон при наведении */
+}
+
+.table tr.active {
+  background-color: #dbeafe; /* Голубой фон для активной строки */
+}
+
+/* --- Изображения категорий и продуктов --- */
+.image {
+  width: 50px; /* Размер изображения */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd; /* Легкая рамка вокруг изображения */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* --- Заголовки секций --- */
+.categories-section h3,
+.products-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Размещаем категории и продукты в столбик */
+  }
+
+  .categories-section,
+  .products-section {
+    flex: 1 0 auto; /* Каждая секция занимает всю ширину */
+  }
+}

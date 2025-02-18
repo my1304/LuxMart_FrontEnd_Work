@@ -1,0 +1,187 @@
+/* Фон overlay для затемнения */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Темный полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Модальное окно */
+.dialogBox {
+  background: #f8f8f8; /* Светлый фон для контраста */
+  border-radius: 12px;
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  max-height: 90vh;
+  padding: 20px;
+  border: 2px solid #00911f; /* Рамка вокруг модального окна */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Добавление тени для глубины */
+  overflow: hidden; /* Для правильного отображения заголовка */
+}
+
+/* Заголовок модального окна */
+.titleBar {
+  background: #0078d7; /* Синий цвет заголовка */
+  padding: 15px 20px; /* Добавлен отступ */
+  display: flex;
+  justify-content: space-between; /* Расположить элементы в заголовке */
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute; /* Позиционирование поверх модального окна */
+  top: 0;
+  left: 0;
+  width: 100%; /* Растянуть по ширине */
+}
+
+/* Отступ для содержания окна, чтобы оно не перекрывалось заголовком */
+.contentArea {
+  padding: 20px 10px 10px; /* Добавлен верхний отступ для заголовка */
+  color: #333;
+  text-align: center;
+  background: #f8f8f8;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Кнопка закрытия */
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute; /* Для позиционирования */
+  right: 10px; /* Расположение слева с небольшим отступом */
+  top: 50%; /* Вертикальное центрирование */
+  transform: translateY(-50%); /* Смещение для идеального центрирования */
+}
+
+.closeBtn:hover {
+  color: #ff4d4d; /* Красный цвет при наведении */
+}
+.productImageGallery {
+  display: flex;
+  width: 100%;
+  max-width: 800%; /* Максимальная ширина */
+  max-height: 50vh;
+  overflow-x: auto; /* Добавляем горизонтальную прокрутку для длинных списков */
+  padding: 10px; /* Увеличиваем паддинг, чтобы рамка выглядела лучше */
+  
+  
+  border: 3px solid #007bff; /* Синяя рамка */
+  border-radius: 7px; /* Скругляем углы */
+  padding: 20px; /* Отступы внутри рамки */
+  /*margin: 10px; /* Внешний отступ */
+  text-align: center; /* Центруем текст внутри рамки */
+  background-color: #ffffff; /* Белый фон рамки */
+}
+
+/* Название продукта */
+.productTitle {
+  font-weight: 500;
+  font-size: 24px; /* Увеличен размер для лучшей читаемости */
+  margin-bottom: 15px;
+  color: #333;  
+}
+.editInputTitle {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.editInputTitle:focus {
+  border-color: #4caf50; /* Зеленая рамка при фокусе */
+}
+/* Цена продукта */
+.productPrice {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00911f;
+  margin-bottom: 15px;
+}
+.editInputPrice {
+  width: 50%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.editInputPrice:focus {
+  border-color: #4caf50; /* Зеленая рамка при фокусе */
+}
+/* Описание продукта */
+.productDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+}
+.editInputDescription {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.editInputDescription:focus {
+  border-color: #4caf50; /* Зеленая рамка при фокусе */
+}
+.separator {
+  border-top: 2px solid #e0e0e0; /* Светло-серая линия */
+  width: 100%; /* Полная ширина внутри родительского контейнера */
+}
+
+/* Группа кнопок */
+.buttonArea {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Центрирование кнопок */
+  gap: 30%; /* Расстояние между кнопками */
+}
+
+/* Кнопки OK и Cancel */
+.okBtn, .cancelBtn {
+  background-color: #0078d7; /* Синий цвет кнопки */
+  font-size: 18px;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.okBtn:hover {
+  background-color: #005bb5; /* Темно-синий цвет при наведении */
+}
+
+.cancelBtn {
+  background-color: #f44336; /* Красный цвет кнопки Cancel */
+}
+
+.cancelBtn:hover {
+  background-color: #d32f2f; /* Темно-красный цвет при наведении */
+}
